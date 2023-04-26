@@ -1,0 +1,131 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 50;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      width: auto;
+      position: static;
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    color: #374151;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__logo-image {
+    max-width: 180px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
+
+  &__toggle {
+    font-size: 1.25rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    display: block;
+    cursor: pointer;
+    outline: none;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    @media (min-width: 1024px) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &--open {
+      display: block;
+    }
+
+    &:not(.navbar__menu--open) {
+      display: none;
+
+      @media (min-width: 1024px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-left: auto;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      font-family: 'Play', sans-serif;
+      font-size: 0.875rem;
+      padding: 1rem 0.75rem;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #374
+
+       &:hover,
+      &:focus {
+        color: #4B5563;
+        text-decoration: none;
+      }
+    }
+  }
+}
